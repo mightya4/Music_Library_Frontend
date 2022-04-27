@@ -1,22 +1,21 @@
 
-function MusicTable(props) {
+const MusicTable = (props) => {
     return (
       <div>
           <table className='table'>
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Artist</th>
-                        <th>Album</th>
-                        <th>Release Date</th>
-                        <th>Genre</th>
-                        <th>Likes</th>
-                        <th>Dislikes</th>
-                    </tr>
-                </thead>
                 <tbody>
+                        <tr>
+                            <th>Title</th>
+                            <th>Artist</th>
+                            <th>Album</th>
+                            <th>Release Date</th>
+                            <th>Genre</th>
+                            <th>Likes</th>
+                            <th>Dislikes</th>
+                        </tr>
                     {props.parentMusicEntries.map((music, index) => {
                         return(<tr key={index}>
+                            <td>{index + 1}</td>
                             <td>{music.title}</td>
                             <td>{music.artist}</td>
                             <td>{music.album}</td>
