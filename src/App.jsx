@@ -11,7 +11,6 @@ function App() {
   return (
     <div>
       <NavigationBar/>
-      <SearchBar/>
       <MusicTable parentMusicEntries = {music}/>
     </div>
   );
