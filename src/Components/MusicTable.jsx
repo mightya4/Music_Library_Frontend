@@ -1,7 +1,5 @@
-import React from 'react';
 
-
-function DisplayMusic() {
+function MusicTable(props) {
     return (
       <div>
           <table className='table'>
@@ -35,4 +33,4 @@ function DisplayMusic() {
     );
   }
   
-  export default DisplayMusic;
+  export default MusicTable;

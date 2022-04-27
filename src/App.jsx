@@ -1,14 +1,18 @@
 import React, { useState } from "react";
-import DisplayMusic from "./DisplayMusic";
-import SearchBar from "./SearchBar";
+import MusicTable from "./Components/MusicTable";
+import NavigationBar from "./Components/NavigationBar";
+import SearchBar from "./Components/SearchBar";
 
-const [music, setMusicEntries] = useState([])
 
 function App() {
+  
+  const [music, setMusicEntries] = useState([])
+
   return (
     <div>
+      <NavigationBar/>
       <SearchBar/>
-      <DisplayMusic parentMusicEntries = {music}/>
+      <MusicTable parentMusicEntries = {music}/>
     </div>
   );
 }
