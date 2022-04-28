@@ -13,16 +13,16 @@ const MusicTable = (props) => {
                             <th>Likes</th>
                             <th>Dislikes</th>
                         </tr>
-                    {props.parentMusicEntries.map((music, index) => {
+                    {props.parentSongEntries.map((song, index) => {
                         return(<tr key={index}>
                             <td>{index + 1}</td>
-                            <td>{music.title}</td>
-                            <td>{music.artist}</td>
-                            <td>{music.album}</td>
-                            <td>{music.release_date}</td>
-                            <td>{music.genre}</td>
-                            <td>{music.likes}</td>
-                            <td>{music.dislikes}</td>
+                            <td>{song.title}</td>
+                            <td>{song.artist}</td>
+                            <td>{song.album}</td>
+                            <td>{song.release_date}</td>
+                            <td>{song.genre}</td>
+                            <td>{song.likes}</td>
+                            <td>{song.dislikes}</td>
                         </tr>
                         );
                     })}

@@ -5,11 +5,11 @@ import SearchBar from './SearchBar';
 function NavigationBar() {
     return (
       <div>
-        <ol>
-          <li>Home</li>
-          <li>About</li>
-        </ol>
-        <SearchBar/>
+        <nav className='navbar navbar-light bg-light justify-content-between'>
+          <a className='navbar-brand' href='#'>Music Library</a>
+          <SearchBar/>
+        </nav>
+
       </div>
     );
   }
