@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
 import MusicTable from "./Components/MusicTable";
 import NavigationBar from "./Components/NavigationBar";
+import SearchBar from "./Components/SearchBar";
 import axios from "axios";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -17,10 +20,13 @@ function App() {
     setSongEntries(response.data)
   }
 
+
   return (
     <div>
+      <SearchBar/> 
       <NavigationBar/>
-      <MusicTable parentSongEntries = {song}/>
+      <Container><MusicTable parentSongEntries = {song}/></Container>
+
     </div>
   );
 }

@@ -1,16 +1,22 @@
 import React from 'react';
-import SearchBar from './SearchBar';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+
 
 
 function NavigationBar() {
     return (
-      <div>
-        <nav className='navbar navbar-light bg-light justify-content-between'>
-          <a className='navbar-brand' href='#'>Music Library</a>
-          <SearchBar/>
-        </nav>
-
-      </div>
+          <Navbar collapseOnSelect expand="lg">
+            <Container>
+              <Navbar.Brand href='#home'><b>Music</b></Navbar.Brand>
+              <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
+              <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav.Link href="#songs">Songs</Nav.Link>
+                <Nav.Link href="#albums">Albums</Nav.Link>
+                <Nav.Link href="#artists">Artists</Nav.Link>
+                <Nav.Link href="#genre">Genre</Nav.Link>
+              </Navbar.Collapse>
+            </Container>
+          </Navbar>
     );
   }
   
